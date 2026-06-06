@@ -20,6 +20,16 @@ const App = () => {
   return (
     <>
       <main>
+        <div className="images">
+          <img id="kennedy" src="/kennedy.png" alt="" />
+          <img id="kikk" src="/kikk.png" alt="" />
+          <img id="msi-chicago" src="/msi-chicago.png" alt="" />
+          <img id="navy-pier" src="/navy-pier.png" alt="" />
+          <img id="opera" src="/opera.png" alt="" />
+          <img id="phone" src="/phone.png" alt="" />
+          <img id="tommorowland" src="tommorowland.png" alt="" />
+        </div>
+
         <Canvas
           id="canvas-elem"
           style={{
@@ -99,7 +109,38 @@ const App = () => {
           <div className="line-1"></div>
           <div className="line-2"></div>
         </section>
-        <section id="section-2"></section>
+        <section id="section-2">
+          <div className="titles">
+            <div image-title="tommorowland" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> Tomorrowland</h1>
+            </div>
+            <div image-title="navy-pier" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> Navy Pier</h1>
+            </div>
+            <div image-title="msi-chicago" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> MSI Chicago</h1>
+            </div>
+            <div image-title="phone" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> This Was Louise’s Phone</h1>
+            </div>
+            <div image-title="kikk" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> KIKK Festival 2018</h1>
+            </div>
+            <div image-title="kennedy" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> The Kennedy Center</h1>
+            </div>
+            <div image-title="opera" className="title">
+              <small>2020 - Ongoing</small>
+              <h1> Royal Opera Of Wallonia</h1>
+            </div>
+          </div>
+        </section>
         <section id="section-3"></section>
       </main>
     </>

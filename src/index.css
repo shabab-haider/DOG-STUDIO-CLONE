@@ -37,10 +37,26 @@ main {
   position: relative;
 }
 
-#canvas-elem {
-  background-image: url("/background-m.png");
+.images img {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+#canvas-elem::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(/background-l.png);
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 0.3s linear;
 }
 
 section {
@@ -152,4 +168,79 @@ section {
     top: 20%;
     right: 25%;
   }
+}
+
+#section-2 {
+  padding: 0 12rem;
+  .titles {
+    display: flex;
+    flex-direction: column;
+    .title {
+      padding-block: 0.5rem;
+      display: flex;
+      gap: 3rem;
+      align-items: start;
+      opacity: 0.4;
+      transition: all 0.3s linear;
+      small {
+        margin-top: 1rem;
+        font-size: 0.5rem;
+      }
+      h1 {
+        font-weight: lighter;
+        font-size: 3rem;
+      }
+    }
+    .title:hover {
+      opacity: 1;
+    }
+  }
+}
+
+main:has(#section-2 .titles .title:hover) #canvas-elem::after {
+  opacity: 0;
+}
+
+main:has(#section-2 .titles .title[image-title="tommorowland"]:hover)
+  .images
+  #tommorowland {
+  opacity: 1;
+  background-color: #020D26;
+  cursor: pointer;
+}
+main:has(#section-2 .titles .title[image-title="phone"]:hover) .images #phone {
+  opacity: 1;
+  background-color: #021829;
+  cursor: pointer;
+}
+main:has(#section-2 .titles .title[image-title="navy-pier"]:hover)
+  .images
+  #navy-pier {
+  opacity: 1;
+  background-color: #030E27;
+  cursor: pointer;
+}
+main:has(#section-2 .titles .title[image-title="opera"]:hover) .images #opera {
+  opacity: 1;
+  background-color: #680202;
+  cursor: pointer;
+}
+main:has(#section-2 .titles .title[image-title="msi-chicago"]:hover)
+  .images
+  #msi-chicago {
+  opacity: 1;
+  background-color: #031234;
+  cursor: pointer;
+}
+main:has(#section-2 .titles .title[image-title="kikk"]:hover) .images #kikk {
+  opacity: 1;
+  background-color: #01127B;
+  cursor: pointer;
+}
+main:has(#section-2 .titles .title[image-title="kennedy"]:hover)
+  .images
+  #kennedy {
+  opacity: 1;
+  background-color: #0C2633;
+  cursor: pointer;
 }
