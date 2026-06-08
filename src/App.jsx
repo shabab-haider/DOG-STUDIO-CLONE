@@ -100,8 +100,12 @@ const App = () => {
                 entertainment, arts & culture.
               </p>
               <div className="social-media">
-                {socialMedia.map((elem) => {
-                  return <p className="media-elem">{elem}</p>;
+                {socialMedia.map((elem, idx) => {
+                  return (
+                    <p key={idx} className="media-elem">
+                      {elem}
+                    </p>
+                  );
                 })}
               </div>
             </div>
